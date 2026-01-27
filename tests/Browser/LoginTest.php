@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 it('log in a user', function () {
     $user = User::factory()->create(['password' => 'Password123!']);
@@ -13,7 +12,6 @@ it('log in a user', function () {
 
     $this->assertAuthenticated();
 });
-
 
 it('logout a user', function () {
     $user = User::factory()->create();
